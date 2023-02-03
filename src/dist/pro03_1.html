@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WRS 업무보고시스템</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+  <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+  <script src="../js/ui_common.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header class="header">
+  <div class="util pc_con">
+    <span>관리자님 반갑습니다.</span>
+    <ul class="util_list">
+      <li><button type="button">내정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+    </ul>
+  </div>
+  <nav class="nav f_sb">
+    <h1><a href="report01.html">업무보고시스템</a></h1>
+    <div class="pc_con">
+      <ul class="gnb pc_gnb" role="navigation">
+        <li class="on"><a href="report01.html">업무보고</a>
+          <ul class="sub">
+            <li class="on"><a href="report01.html">실적/계획 작성/수정</a></li>
+            <li><a href="report02.html">업무목록</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="task01.html">업무관리</a>
+          <ul class="sub">
+            <li><a href="task01.html">작업 목록</a></li>
+            <li><a href="task02.html">작업 할당</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="pro01.html">프로젝트 관리</a>
+          <ul class="sub">
+            <li><a href="pro01.html">프로젝트 목록</a></li>
+            <li><a href="#">할당</a></li>
+            <li><a href="pro03.html">요구사항 목록</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="admin01.html">사용자관리</a>
+          <ul class="sub">
+            <li><a href="admin01.html">사용자 목록</a></li>
+            <li><a href="#">조직목록</a></li>
+            <li><a href="#">권한관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메뉴관리</a>
+        </li>
+        <li>
+          <a href="#">통계</a>
+        </li>
+      </ul>
+    </div>
+    <div class="m_con">
+      <a href="#" class="m_con allMenuOpen">전체메뉴 열기</a>
+      <div id="allMenuBox" tabindex="-1" class="ins_allMenuBox">
+        <div class="util m_con">
+          <span>관리자님 반갑습니다.</span>
+          <ul class="util_list">
+            <li><button type="button">내정보</button></li>
+            <li><button type="button">로그아웃</button></li>
+          </ul>
+        </div>
+        <ul class="gnb m_con" role="navigation">
+          <li><a href="report01.html">업무보고</a>
+            <ul class="sub">
+              <li><a href="report01.html">실적/계획 작성/수정</a></li>
+              <li><a href="report02.html">업무목록</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="task01.html">업무관리</a>
+            <ul class="sub">
+              <li><a href="task01.html">작업 목록</a></li>
+              <li><a href="task02.html">작업 할당</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pro01.html">프로젝트 관리</a>
+            <ul class="sub">
+              <li><a href="pro01.html">프로젝트 목록</a></li>
+              <li><a href="#">할당</a></li>
+              <li><a href="pro03.html">요구사항 관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="admin01.html">사용자관리</a>
+            <ul class="sub">
+              <li><a href="admin01.html">사용자 목록</a></li>
+              <li><a href="#">조직목록</a></li>
+              <li><a href="#">권한관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">메뉴관리</a>
+          </li>
+          <li>
+            <a href="#">통계</a>
+          </li>
+        </ul>
+        <a href="#" class="m_con allMenuClose">전체메뉴 닫기</a>
+      </div>
+    </div>
+  </nav>
+</header>
+    <div class="cont">
+      <div class="tit">
+        <h2>요구사항 목록 추가</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">프로젝트 관리</a></li>
+            <li><a href="#">요구사항 목록</a></li>
+            <li>요구사항 목록 추가</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents">
+        <div class="section">
+          <div class="dtable">
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">요구사항명</label>
+                </dt>
+                <dd>
+                  <input type="text" value="현업용 다중분석 알고리즘별 분석결과 조회 웹페이지 개선">
+                </dd>
+              </dl>
+            </div>
+            <div class="line3">
+              <dl>
+                <dt>
+                  <label for="r_start_date">난이도</label>
+                </dt>
+                <dd>
+                  <select name="difficulty">
+                    <option value="상">상</option>
+                    <option value="중">중</option>
+                    <option value="하">하</option>
+                  </select>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="r_end_date">중요도</label>
+                </dt>
+                <dd>
+                  <select name="importance">
+                    <option value="상">상</option>
+                    <option value="중">중</option>
+                    <option value="하">하</option>
+                  </select>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="r_end_date">우선순위</label>
+                </dt>
+                <dd>
+                  <select name="priority">
+                    <option value="상">상</option>
+                    <option value="중">중</option>
+                    <option value="하">하</option>
+                  </select>
+                </dd>
+              </dl>
+            </div>
+            
+            <div class="line3">
+              <dl>
+                <dt>
+                  <label for="r_start_date">RFP_ID</label>
+                </dt>
+                <dd>
+                  <input type="text" value="FUN02">
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="r_end_date">유형</label>
+                </dt>
+                <dd>
+                  <select name="type">
+                    <option value="외부">외부</option>
+                  </select>
+                </dd>
+              </dl>
+            </div>
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">고객사</label>
+                </dt>
+                <dd>
+                  <input type="text" value="기상청">
+                </dd>
+              </dl>
+            </div>
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">요구사항내용</label>
+                </dt>
+                <dd>
+                  <textarea id="content">- 분석 결과 모니터링 화면의 GIS 지도 레이어 개선
+- 분석 표출 목적에 따른 이벤트 분석 결과 조회 페이지 개선
+- 분석 결과 조회 테이블 표출 내용 개선</textarea>
+                </dd>
+              </dl>
+            </div>
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">수행방안</label>
+                </dt>
+                <dd>
+                  <textarea id="content">- 분석 결과 모니터링 화면의 GIS 지도 레이어 개선하겠다
+- 분석 표출 목적에 따른 이벤트 분석 결과 조회 페이지 개선하겠다
+- 분석 결과 조회 테이블 표출 내용 개선하겠다</textarea>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="btn_wrap flex_wrap f_sb">
+          <button class="btn btn_gray">목록</button>
+          <div>
+            <button class="btn btn_blue">저장</button>
+            <button class="btn btn_red">취소</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+  <p>Copyright &copy; 2023 KITValley Co.,Ltd. All right reserved.</p>
+</footer>
+  </div>
+</body>
+
+</html>

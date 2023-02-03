@@ -1,0 +1,247 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <div class="cont">
+      <div class="tit">
+        <h2>실적&sol;계획 작성</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">업무보고</a></li>
+            <li>실적/계획 작성</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents">
+        <div class="section">
+          <div class="dtable">
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">요구사항명</label>
+                </dt>
+                <dd>
+                  <input type="text" value="현업용 다중분석 알고리즘별 분석결과 조회 웹페이지 개선">
+                </dd>
+              </dl>
+            </div>
+            <div class="line2">
+              <dl>
+                <dt>
+                  <label for="start_date">시작예정일</label>
+                </dt>
+                <dd>
+                  <span class="date_wrap">
+                    <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                      class="date" dataformat="datepic" required></span>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="end_date">종료예정일</label>
+                </dt>
+                <dd>
+                  <span class="date_wrap">
+                    <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                      class="date" dataformat="datepic" required></span>
+                </dd>
+              </dl>
+            </div>
+            <div class="line2">
+              <dl>
+                <dt>
+                  <label for="r_start_date">실제시작일</label>
+                </dt>
+                <dd>
+                  <span class="date_wrap">
+                    <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                      class="date" dataformat="datepic" required></span>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="r_end_date">실제종료일</label>
+                </dt>
+                <dd>
+                  <span class="date_wrap">
+                    <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                      class="date" dataformat="datepic" required></span>
+                </dd>
+              </dl>
+            </div>
+            <div class="line2">
+              <dl>
+                <dt>
+                  <label for="start_date">등록일</label>
+                </dt>
+                <dd>
+                  <span class="date_wrap">
+                    <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                      class="date" dataformat="datepic" required></span>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="end_date">등록자</label>
+                </dt>
+                <dd>
+                  <input type="text" id="end_date">
+                </dd>
+              </dl>
+            </div>
+            <div class="line2">
+              <dl>
+                <dt>
+                  <label for="start_date">수정일</label>
+                </dt>
+                <dd>
+                  <span class="date_wrap">
+                    <input type="text" class="datepicker" name="date" placeholder="YYYY-MM-DD" readonly
+                      class="date" dataformat="datepic" required></span>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="end_date">수정자</label>
+                </dt>
+                <dd>
+                  <input type="text" id="end_date">
+                </dd>
+              </dl>
+            </div>
+            <div class="line2">
+              <dl>
+                <dt>
+                  <label for="start_date">작업유형</label>
+                </dt>
+                <dd>
+                  <input type="text" id="start_date" class="input_search">
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="end_date">작업범주</label>
+                </dt>
+                <dd>
+                  <input type="text" id="end_date">
+                </dd>
+              </dl>
+            </div>
+            <div class="line2">
+              <dl>
+                <dt>
+                  <label for="start_date">내외구분</label>
+                </dt>
+                <dd>
+                  <input type="text" id="start_date" class="input_search">
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="end_date">주요업무장소</label>
+                </dt>
+                <dd>
+                  <input type="text" id="end_date">
+                </dd>
+              </dl>
+            </div>
+            <div>
+              <dl>
+                <dt>
+                  <label for="title">담당자</label>
+                </dt>
+                <dd>
+                  <ul class="workerlist_wrap">
+                    <li><select name="" id="">
+                      <option value="역할">역할</option>
+                    </select></li>
+                    <li><select name="" id="">
+                      <option value="홍길동">홍길동</option>
+                    </select></li>
+                    <li><button type="button" class="btn btn_greenline">추가</button></li>
+                  </ul>
+                  <ul class="attendee_wrap">
+                    <li>
+                      <span>정</span>
+                      <span>홍길동</span>
+                    </li>
+                    <li>
+                      <span>부</span>
+                      <span>뿡뿡이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                    <li>
+                      <span>분석</span>
+                      <span>뚝딱이</span>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">작업내용</label>
+                </dt>
+                <dd>
+                  <textarea id="content">어항 입구 부유물 수거 요청</textarea>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="btn_wrap flex_wrap f_sb">
+          <button class="btn btn_gray">목록</button>
+          <div>
+            <button class="btn btn_blue">저장</button>
+            <button class="btn btn_red">취소</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('inc/footer.html')
+  </div>
+</body>
+
+</html>

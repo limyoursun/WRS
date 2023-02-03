@@ -1,0 +1,139 @@
+@@include('inc/top.html')
+
+<body>
+  <div id="wrap">
+    @@include('inc/header.html')
+    <div class="cont">
+      <div class="tit">
+        <h2>요구사항 목록 추가</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">프로젝트 관리</a></li>
+            <li><a href="#">요구사항 목록</a></li>
+            <li>요구사항 목록 추가</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents">
+        <div class="section">
+          <div class="dtable">
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">요구사항명</label>
+                </dt>
+                <dd>
+                  <input type="text" value="현업용 다중분석 알고리즘별 분석결과 조회 웹페이지 개선">
+                </dd>
+              </dl>
+            </div>
+            <div class="line3">
+              <dl>
+                <dt>
+                  <label for="r_start_date">난이도</label>
+                </dt>
+                <dd>
+                  <select name="difficulty">
+                    <option value="상">상</option>
+                    <option value="중">중</option>
+                    <option value="하">하</option>
+                  </select>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="r_end_date">중요도</label>
+                </dt>
+                <dd>
+                  <select name="importance">
+                    <option value="상">상</option>
+                    <option value="중">중</option>
+                    <option value="하">하</option>
+                  </select>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="r_end_date">우선순위</label>
+                </dt>
+                <dd>
+                  <select name="priority">
+                    <option value="상">상</option>
+                    <option value="중">중</option>
+                    <option value="하">하</option>
+                  </select>
+                </dd>
+              </dl>
+            </div>
+            
+            <div class="line3">
+              <dl>
+                <dt>
+                  <label for="r_start_date">RFP_ID</label>
+                </dt>
+                <dd>
+                  <input type="text" value="FUN02">
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <label for="r_end_date">유형</label>
+                </dt>
+                <dd>
+                  <select name="type">
+                    <option value="외부">외부</option>
+                  </select>
+                </dd>
+              </dl>
+            </div>
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">고객사</label>
+                </dt>
+                <dd>
+                  <input type="text" value="기상청">
+                </dd>
+              </dl>
+            </div>
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">요구사항내용</label>
+                </dt>
+                <dd>
+                  <textarea id="content">- 분석 결과 모니터링 화면의 GIS 지도 레이어 개선
+- 분석 표출 목적에 따른 이벤트 분석 결과 조회 페이지 개선
+- 분석 결과 조회 테이블 표출 내용 개선</textarea>
+                </dd>
+              </dl>
+            </div>
+            <div class="line1">
+              <dl>
+                <dt>
+                  <label for="content">수행방안</label>
+                </dt>
+                <dd>
+                  <textarea id="content">- 분석 결과 모니터링 화면의 GIS 지도 레이어 개선하겠다
+- 분석 표출 목적에 따른 이벤트 분석 결과 조회 페이지 개선하겠다
+- 분석 결과 조회 테이블 표출 내용 개선하겠다</textarea>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="btn_wrap flex_wrap f_sb">
+          <button class="btn btn_gray">목록</button>
+          <div>
+            <button class="btn btn_blue">저장</button>
+            <button class="btn btn_red">취소</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('inc/footer.html')
+  </div>
+</body>
+
+</html>

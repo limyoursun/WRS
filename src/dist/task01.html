@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WRS 업무보고시스템</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../plugins/axicon/axicon.min.css" />
+  <link rel="stylesheet" href="../plugins/jquery-ui/themes/base/jquery-ui.min.css" />
+  <link rel="stylesheet" href="../plugins/jqGrid/css/ui.jqgrid.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../plugins/jqGrid/js/jquery.jqGrid.min.js"></script>
+  <script src="../plugins/jqGrid/js/i18n/grid.locale-kr.js"></script>
+  <script src="../js/ui_common.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header class="header">
+  <div class="util pc_con">
+    <span>관리자님 반갑습니다.</span>
+    <ul class="util_list">
+      <li><button type="button">내정보</button></li>
+      <li><button type="button">로그아웃</button></li>
+    </ul>
+  </div>
+  <nav class="nav f_sb">
+    <h1><a href="report01.html">업무보고시스템</a></h1>
+    <div class="pc_con">
+      <ul class="gnb pc_gnb" role="navigation">
+        <li class="on"><a href="report01.html">업무보고</a>
+          <ul class="sub">
+            <li class="on"><a href="report01.html">실적/계획 작성/수정</a></li>
+            <li><a href="report02.html">업무목록</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="task01.html">업무관리</a>
+          <ul class="sub">
+            <li><a href="task01.html">작업 목록</a></li>
+            <li><a href="task02.html">작업 할당</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="pro01.html">프로젝트 관리</a>
+          <ul class="sub">
+            <li><a href="pro01.html">프로젝트 목록</a></li>
+            <li><a href="#">할당</a></li>
+            <li><a href="pro03.html">요구사항 목록</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="admin01.html">사용자관리</a>
+          <ul class="sub">
+            <li><a href="admin01.html">사용자 목록</a></li>
+            <li><a href="#">조직목록</a></li>
+            <li><a href="#">권한관리</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메뉴관리</a>
+        </li>
+        <li>
+          <a href="#">통계</a>
+        </li>
+      </ul>
+    </div>
+    <div class="m_con">
+      <a href="#" class="m_con allMenuOpen">전체메뉴 열기</a>
+      <div id="allMenuBox" tabindex="-1" class="ins_allMenuBox">
+        <div class="util m_con">
+          <span>관리자님 반갑습니다.</span>
+          <ul class="util_list">
+            <li><button type="button">내정보</button></li>
+            <li><button type="button">로그아웃</button></li>
+          </ul>
+        </div>
+        <ul class="gnb m_con" role="navigation">
+          <li><a href="report01.html">업무보고</a>
+            <ul class="sub">
+              <li><a href="report01.html">실적/계획 작성/수정</a></li>
+              <li><a href="report02.html">업무목록</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="task01.html">업무관리</a>
+            <ul class="sub">
+              <li><a href="task01.html">작업 목록</a></li>
+              <li><a href="task02.html">작업 할당</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="pro01.html">프로젝트 관리</a>
+            <ul class="sub">
+              <li><a href="pro01.html">프로젝트 목록</a></li>
+              <li><a href="#">할당</a></li>
+              <li><a href="pro03.html">요구사항 관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="admin01.html">사용자관리</a>
+            <ul class="sub">
+              <li><a href="admin01.html">사용자 목록</a></li>
+              <li><a href="#">조직목록</a></li>
+              <li><a href="#">권한관리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">메뉴관리</a>
+          </li>
+          <li>
+            <a href="#">통계</a>
+          </li>
+        </ul>
+        <a href="#" class="m_con allMenuClose">전체메뉴 닫기</a>
+      </div>
+    </div>
+  </nav>
+</header>
+    <div class="cont">
+      <div class="tit">
+        <h2>업무목록</h2>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">업무관리</a></li>
+            <li>업무목록</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contents">
+        <div class="search">
+          <div class="search_list flex_wrap f_sb">
+            <ul>
+              <li>
+                <div class="selectBox">
+                  <select name="연도" class="select" id="year">
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                  </select>
+                </div>
+                <label for="year">년</label>
+              </li>
+              <li>
+                <div class="selectBox">
+                  <select name="사업명" class="select">
+                    <option value="지진조기경보">지진조기경보</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_blue">신규</button>
+              <button type="button" class="btn btn_red">삭제</button>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="tbl_wrap">
+            <table id="jqGrid" class="jq-grid"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+  <p>Copyright &copy; 2023 KITValley Co.,Ltd. All right reserved.</p>
+</footer>
+  </div>
+</body>
+<script>
+  var mydata = [
+    { "t1": "T000000000001", "t2": "실시간 다중분석 조기경보 모니터링 및 분석결과 표출 기능 구축", "t3": "외부", "t4": "FUN02", "t5": "일시", "t6": "2023-01-10", "t7": "2023-01-10", "t8": "2023-01-10", "t9": "2023-01-10", "t10": "개발", "t11": "O" },
+    { "t1": "T000000000001", "t2": "실시간 다중분석 조기경보 모니터링 및 분석결과 표출 기능 구축", "t3": "외부", "t4": "FUN02", "t5": "일시", "t6": "2023-01-10", "t7": "2023-01-10", "t8": "2023-01-10", "t9": "2023-01-10", "t10": "개발", "t11": "O" },
+    { "t1": "T000000000001", "t2": "실시간 다중분석 조기경보 모니터링 및 분석결과 표출 기능 구축", "t3": "외부", "t4": "FUN02", "t5": "일시", "t6": "2023-01-10", "t7": "2023-01-10", "t8": "2023-01-10", "t9": "2023-01-10", "t10": "개발", "t11": "O" },
+    { "t1": "T000000000001", "t2": "실시간 다중분석 조기경보 모니터링 및 분석결과 표출 기능 구축", "t3": "외부", "t4": "FUN02", "t5": "일시", "t6": "2023-01-10", "t7": "2023-01-10", "t8": "2023-01-10", "t9": "2023-01-10", "t10": "개발", "t11": "O" },
+    { "t1": "T000000000001", "t2": "실시간 다중분석 조기경보 모니터링 및 분석결과 표출 기능 구축", "t3": "외부", "t4": "FUN02", "t5": "일시", "t6": "2023-01-10", "t7": "2023-01-10", "t8": "2023-01-10", "t9": "2023-01-10", "t10": "개발", "t11": "O" },
+    { "t1": "T000000000001", "t2": "실시간 다중분석 조기경보 모니터링 및 분석결과 표출 기능 구축", "t3": "외부", "t4": "FUN02", "t5": "일시", "t6": "2023-01-10", "t7": "2023-01-10", "t8": "2023-01-10", "t9": "2023-01-10", "t10": "개발", "t11": "O" },
+    { "t1": "T000000000001", "t2": "실시간 다중분석 조기경보 모니터링 및 분석결과 표출 기능 구축", "t3": "외부", "t4": "FUN02", "t5": "일시", "t6": "2023-01-10", "t7": "2023-01-10", "t8": "2023-01-10", "t9": "2023-01-10", "t10": "개발", "t11": "O" },
+    { "t1": "T000000000001", "t2": "실시간 다중분석 조기경보 모니터링 및 분석결과 표출 기능 구축", "t3": "외부", "t4": "FUN02", "t5": "일시", "t6": "2023-01-10", "t7": "2023-01-10", "t8": "2023-01-10", "t9": "2023-01-10", "t10": "개발", "t11": "O" }
+  ];
+  $("#jqGrid").jqGrid({
+    data: mydata,
+    datatype: "local",
+    colModel: [
+      { label: '업무ID', name: 't1'},
+      { label: '작업명', name: 't2', align:'left'},
+      { label: '유형', name: 't3'},
+      { label: '요구사항 ID', name: 't4'},
+      { label: '작업유형', name: 't5'},
+      { label: '시작예정일', name: 't6'},
+      { label: '종료예정일', name: 't7'},
+      { label: '실제시작일', name: 't8'},
+      { label: '실제종료일', name: 't9'},
+      { label: '작업범주', name: 't10'},
+      { label: '진행상태', name: 't11'}
+    ],
+    loadonce: true,
+    viewrecords: true,
+    height: 442,
+    width: null,
+shrinkToFit: false
+  });
+</script>
+
+</html>
